@@ -9,15 +9,13 @@
   apt_repository:
     repo: "deb http://deb.debian.org/debian buster-backports main"
     state: present
-    filename: buster-backports
-    update_cache: no
+    update_cache: yes
 
 - name: Install Certbot
   # become: yes
   apt:
     name: certbot
     state: present
-    #default_release: buster_backports
     update_cache: yes
 
 - name: Copy Certbot configuration

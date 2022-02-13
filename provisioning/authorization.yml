@@ -1,8 +1,8 @@
 ---
-- name: Add authrized key
-  hosts: all
+- name: Add authorized key
+  hosts: site
   remote_user: root
-  task:
+  tasks:
     - name: Add user authorized key
       authorized_key:
         user: deploy
